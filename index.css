@@ -67,6 +67,18 @@ body {
   width:50%;
   clear:both;
 }
+
+
+@keyframes slide-in-left {
+  0%{transform: translateX(-800px); };
+  100%{transform: translateX(0); };
+}
+
+@keyframes slide-in-right {
+  0%{transform: translateX(2400px); };
+  100%{transform: translateX(0); };
+}
+
 .timeline-block h2,h3{
   margin: 0;
   padding:0 auto 10px auto;
@@ -74,9 +86,13 @@ body {
 .left{
   float:left;
   margin-top: 100px;
+  animation-name: slide-in-left;
+  animation-duration: 3s;
 }
 .right{
   float:right;
+  animation-name: slide-in-right;
+  animation-duration: 4s;
 }
 .left div.info{
   margin-left: 30px;
@@ -109,6 +125,7 @@ body {
   cursor:zoom-in;
   transition: all 200ms ease-in;
   transform: scale(1.1);
+  font-weight: bold;
 }
 .logo{
   height:160px;
