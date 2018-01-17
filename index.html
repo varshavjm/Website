@@ -1,0 +1,103 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&effect=vintage" rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="./jquery.fullPage.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+   </head>
+  <script src="./jquery.fullPage.js"></script>
+<title> Hello World </title>
+</head>
+<body id='root'>
+  <div id='navbar'>
+    <a href='#section1'>About</a>
+    <a href='#section2'>Education</a>
+    <a href='#section3'>Projects</a>
+    <a href='#section4'>Experience</a>
+    <a href='#section5'>Contact</a>
+  </div>
+  <div id='wrapper'>
+    <section class='section' id='section1' data-anchor='section1'>
+      <div class='background-image animatedParent'>
+          <div class='text animated fadeIn'>
+            Hola! I am Varsha Muzumdar!
+          </div>
+      </div>
+    </section>
+    <section class='section' data-anchor='section2'>
+      <div class='timeline-block left'>
+          <div class='info'>
+            <h2>Bachelors in Computer Engineering</h2>
+            <h3>Pune Institute of Computer Technology, Pune, India</h3>
+            <div class='infotext'>
+                  I completed my Bachelors in Computer Engineering from PICT. This is where
+                  I realised my passion for programming and problem solving. As you say, you always suceed in whatever you pursue with
+                  passion, I could sense that as I completed this journey with First class Distinction and stood second in the Computer
+                  Department in final year.
+            </div>
+          </div>
+          <div id="UndergradAtPICT" class='logodiv'>
+            <div class='logo'>
+            </div>
+          </div>
+      </div>
+      <div class='timeline-block right'>
+          <div class='info'>
+            <h2>Masters in Computer Science</h2>
+            <h3>Arizona State University, Arizona, United States</h3>
+            <div class='infotext'>
+                  I am currently pursuing my Masters from ASU. The diverse and in-depth coursework here elevated my knowledge across different domains
+                  like Information Retrieval, Mobile Computing and Artificial Intelligence. I typlically love designing front-end and back-end of web applications.
+                  I realised my potential to become a full-stack developer by working on projects that visualized data, extracted patterns and semantic meaning out of it.
+
+            </div>
+          </div>
+          <div id="MastersAtASU" class='logodiv'>
+            <div class='logo'>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+    <section class='section' data-anchor='section3'>
+      <h1>
+        Projects
+      </h1>
+        <div class='slide'>
+          <h1>
+          This is the first horizontal slide!
+        </h1>
+        </div>
+        <div class='slide'>
+          <h1>
+          This is the second horizontal slide!
+        </h1>
+        </div>
+        <div class='slide'>
+          <h1>
+          This is the third horizontal slide!
+        </h1>
+        </div>
+      </h1>
+    </section>
+    <section class='section' data-anchor='section4'>
+      <h1>
+        Experience
+      </h1>
+    </section>
+    <section class='section' data-anchor='section5'>
+      <h1>
+        Contact
+      </h1>
+    </section>
+
+
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('#wrapper').fullpage();
+    });
+  </script>
+</body>
+</html>
