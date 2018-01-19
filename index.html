@@ -14,9 +14,9 @@
   <div id='navbar'>
     <a href='#about'>About</a>
     <a href='#education'>Education</a>
-    <a href='#section3'>Projects</a>
-    <a href='#section4'>Experience</a>
-    <a href='#section5'>Contact</a>
+    <a href='#projects'>Projects</a>
+    <a href='#experience'>Experience</a>
+    <a href='#contact'>Contact</a>
   </div>
   <div id='wrapper'>
     <section class='section' id='section1' data-anchor='about'>
@@ -28,7 +28,7 @@
     </section>
     <section class='section' data-anchor='education'>
       <div class="vline" ></div>
-      <div class='timeline-block left'>
+      <div class='timeline-block left first'>
           <div class='info'>
             <h2>Bachelors in Computer Engineering</h2>
             <h3>Pune Institute of Computer Technology, Pune, India</h3>
@@ -62,7 +62,7 @@
 
     </section>
 
-    <section class='section' data-anchor='section3'>
+    <section class='section' data-anchor='projects'>
       <h1>
         Projects
       </h1>
@@ -84,9 +84,9 @@
       </h1>
     </section>
     <!--Experience Section -->
-    <section class='section' data-anchor='section4'>
+    <section class='section' data-anchor='experience'>
       <div class="vline" ></div>
-      <div class='timeline-block left'>
+      <div class='timeline-block left first'>
           <div class='info'>
             <h3>Software Engineer(May 2015-June 2016)</h3>
             <h4>EQ Technologic, Pune, India</h4>
@@ -118,12 +118,12 @@
             </div>
           </div>
       </div>
-      <div class='timeline-block left'>
+      <div class='timeline-block left' id='thirdExp'>
           <div class='info'>
             <h3>Graduate Assistant (August 2017-Present)</h3>
             <h4>Arizona State University, Tempe, United States</h4>
             <div class='infotext'>
-              I am currently working as a grader for the courses Introduction to theory of Computation, Principles of Programming in C++.
+              I am currently working as a grader for courses Introduction to theory of Computation, Principles of Programming in C++.
             </div>
           </div>
           <div id="MastersAtASU" class='logodiv'>
@@ -132,7 +132,7 @@
           </div>
       </div>
     </section>
-    <section class='section' data-anchor='section5'>
+    <section class='section' data-anchor='contact'>
       <h1>
         Contact
       </h1>
@@ -150,11 +150,18 @@
 		      var leavingSection = $(this);
 
 		        //after leaving section 2
-		          if((index == 1 && direction =='down') || (index == 3 && direction =='up') )
+		          if((index == 1 && direction =='down') || (index == 3 && direction =='down')  )
               {
-                   $('.left').addClass('animated slideInLeft').on('animationend',function(){
+
+                   $('.first').addClass('animated slideInLeft').on('animationend',function(){
                    $(this).removeClass('animated slideInLeft');
                    });
+
+                   $('#thirdExp').addClass('animated slideInLeftThird').on('animationend',function(){
+                   $(this).removeClass('animated slideInLeftThird');
+                   });
+
+
                    $('.right').addClass('animated slideInRight').on('animationend',function(){
                    $(this).removeClass('animated slideInRight');
                    });

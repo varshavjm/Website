@@ -1484,14 +1484,35 @@
   }
 }
 
+/*This is specially written for third left block Experience section*/
+@keyframes slideInLeftThird {
+  from {
+    transform: translate3d(-600%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeftThird {
+  animation-name: slideInLeftThird;
+  animation-duration: 4s;
+}
+
+
+
 .slideInLeft {
   animation-name: slideInLeft;
   animation-duration: 2s;
 }
 
+
+
 @keyframes slideInRight {
   from {
-    transform: translate3d(-2400px, 0, 0);
+    transform: translate3d(300%, 0, 0);
     visibility: visible;
   }
 

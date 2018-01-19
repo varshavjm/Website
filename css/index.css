@@ -48,18 +48,8 @@ color: rgb(28, 7, 38);
   font-weight: bold;
   font-family: 'Amatic SC', cursive;
   text-shadow: 5px 5px 5px #aaa;
-/*
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  */
 }
 
-/*
-@keyframes fadeIn {
-    0% { opacity: 0;}
-    100%{ opacity: 1; display: block;}
-}
-*/
 
 body {
   font-weight: bold;
@@ -73,16 +63,6 @@ body {
   clear:both;
 }
 
-@keyframes slideInLeft {
-  0%{transform: translateX(-800px); };
-  100%{transform: translateX(0); };
-}
-
-@keyframes slideInRight {
-  0%{transform: translateX(2400px); };
-  100%{transform: translateX(0); };
-}
-
 
 
 .timeline-block h2,h3,h4{
@@ -92,16 +72,12 @@ body {
 .left{
   float:left;
   margin-top: 40px;
-  /*animation-name: slideInLeft;
-  animation-duration: 3s;
-  */
+}
+#thirdExp{
+  margin-top: 0 !important;
 }
 .right{
   float:right;
-  /*
-  animation-name: slideInRight;
-  animation-duration: 4s;
-  */
 }
 .left div.info{
   margin-left: 30px;
