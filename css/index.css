@@ -7,12 +7,14 @@ color: rgb(28, 7, 38);
 }
 
 #section1{
-  background-image: url('./img/bkgrnd1.jpg');
+  background-image: url('../img/bkgrnd1.jpg');
   background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: cover;
+  /*background-position: 0 100%;*/
+  background-size: 100%;
   background-blend-mode: overlay;
   background-color: rgba(0,0,0,.2);
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #navbar{
@@ -46,15 +48,18 @@ color: rgb(28, 7, 38);
   font-weight: bold;
   font-family: 'Amatic SC', cursive;
   text-shadow: 5px 5px 5px #aaa;
-  animation-name: fade-in;
+/*
+  animation-name: fadeIn;
   animation-duration: 4s;
+  */
 }
 
-
-@keyframes fade-in {
+/*
+@keyframes fadeIn {
     0% { opacity: 0;}
     100%{ opacity: 1; display: block;}
 }
+*/
 
 body {
   font-weight: bold;
@@ -62,37 +67,41 @@ body {
   font-size:30px;
 }
 
-/*Style for education section*/
+/*Style for education, experience section*/
 .timeline-block{
   width:50%;
   clear:both;
 }
 
-
-@keyframes slide-in-left {
+@keyframes slideInLeft {
   0%{transform: translateX(-800px); };
   100%{transform: translateX(0); };
 }
 
-@keyframes slide-in-right {
+@keyframes slideInRight {
   0%{transform: translateX(2400px); };
   100%{transform: translateX(0); };
 }
 
-.timeline-block h2,h3{
+
+
+.timeline-block h2,h3,h4{
   margin: 0;
   padding:0 auto 10px auto;
 }
 .left{
   float:left;
-  margin-top: 100px;
-  animation-name: slide-in-left;
+  margin-top: 40px;
+  /*animation-name: slideInLeft;
   animation-duration: 3s;
+  */
 }
 .right{
   float:right;
-  animation-name: slide-in-right;
+  /*
+  animation-name: slideInRight;
   animation-duration: 4s;
+  */
 }
 .left div.info{
   margin-left: 30px;
@@ -139,12 +148,27 @@ body {
 }
 
 #UndergradAtPICT{
-    background-image: url('./img/education/Pict_logo.png');
-
+    background-image: url('../img/education/Pict_logo.png');
 }
 #MastersAtASU{
-  background-image: url('./img/education/asu_university.png');
+  background-image: url('../img/education/asu_university.png');
+}
+#WorkAtEq{
+  background-image: url('../img/education/eq-web.png');
+}
+#WorkAtCisco{
+  background-image: url('../img/education/cisco_cloud_center_460x230.png');
 }
 .section div{
   display:block;
+}
+
+.vline{
+  background-color: rgb(98, 1, 255);
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: transitionX(-50%);
+  top: 40px;
+  width: 5px;
 }

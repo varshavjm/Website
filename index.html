@@ -1,30 +1,33 @@
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&effect=vintage" rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="./jquery.fullPage.css">
-  <link rel="stylesheet" type="text/css" href="./index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
    </head>
-  <script src="./jquery.fullPage.js"></script>
-<title> Hello World </title>
+  <script src="./js/jquery.fullPage.js"></script>
+  <title> Hello World </title>
 </head>
 <body id='root'>
   <div id='navbar'>
-    <a href='#section1'>About</a>
-    <a href='#section2'>Education</a>
+    <a href='#about'>About</a>
+    <a href='#education'>Education</a>
     <a href='#section3'>Projects</a>
     <a href='#section4'>Experience</a>
     <a href='#section5'>Contact</a>
   </div>
   <div id='wrapper'>
-    <section class='section' id='section1' data-anchor='section1'>
-      <div class='background-image animatedParent'>
+    <section class='section' id='section1' data-anchor='about'>
+      <div class='background-image'>
           <div class='text animated fadeIn'>
-            Hola! I am Varsha Muzumdar!
+            Holla! I am Varsha Muzumdar!
           </div>
       </div>
     </section>
-    <section class='section' data-anchor='section2'>
+    <section class='section' data-anchor='education'>
+      <div class="vline" ></div>
       <div class='timeline-block left'>
           <div class='info'>
             <h2>Bachelors in Computer Engineering</h2>
@@ -32,7 +35,7 @@
             <div class='infotext'>
                   I completed my Bachelors in Computer Engineering from PICT. This is where
                   I realised my passion for programming and problem solving. As you say, you always suceed in whatever you pursue with
-                  passion, I could sense that as I completed this journey with First class Distinction and stood second in the Computer
+                  passion, I could sense that as I completed a milestone of this journey with First class Distinction and stood second in the Computer
                   Department in final year.
             </div>
           </div>
@@ -80,10 +83,54 @@
         </div>
       </h1>
     </section>
+    <!--Experience Section -->
     <section class='section' data-anchor='section4'>
-      <h1>
-        Experience
-      </h1>
+      <div class="vline" ></div>
+      <div class='timeline-block left'>
+          <div class='info'>
+            <h3>Software Engineer(May 2015-June 2016)</h3>
+            <h4>EQ Technologic, Pune, India</h4>
+            <div class='infotext'>
+                  With the commencement of my professional career, I picked eQ's Migration Integration Product to work on
+                  due to its eye catch business process orchestration feature. I worked on the backend of 'Invoke REST Service' BPM activity
+                  by implementing REST clients and services using Apache HTTPClient, Jersey and Apache CXF. I also implemented serialization and deserialization
+                  modules for JAXB response objects. Other projects included REST to JSON transformation, TeamCenter Data manipulation through Java APIs.
+            </div>
+          </div>
+          <div id="WorkAtEq" class='logodiv'>
+            <div class='logo'>
+            </div>
+          </div>
+      </div>
+      <div class='timeline-block right'>
+          <div class='info'>
+            <h3>Software Engineer Intern (May 2017-August 2017)</h3>
+            <h4>Cisco CloudCenter, San Jose, United States</h4>
+            <div class='infotext'>
+              This is where I got the golden opportunity to work on the user interface
+              for Cisco's CloudCenter Documentation website. It was fun to dive into artistic, advanced world of CSS media queries, gradients, glyphicons and Jquery.
+              Some of the key features included cross-browser compatibility, login page, header components, implementing expand-collapsible table of contents and styling of these
+              components. I also implemented the search module for version-wise search of keyowrds in a documentation space.
+            </div>
+          </div>
+          <div id="WorkAtCisco" class='logodiv'>
+            <div class='logo'>
+            </div>
+          </div>
+      </div>
+      <div class='timeline-block left'>
+          <div class='info'>
+            <h3>Graduate Assistant (August 2017-Present)</h3>
+            <h4>Arizona State University, Tempe, United States</h4>
+            <div class='infotext'>
+              I am currently working as a grader for the courses Introduction to theory of Computation, Principles of Programming in C++.
+            </div>
+          </div>
+          <div id="MastersAtASU" class='logodiv'>
+            <div class='logo'>
+            </div>
+          </div>
+      </div>
     </section>
     <section class='section' data-anchor='section5'>
       <h1>
@@ -94,9 +141,30 @@
 
   </div>
   <script>
-    $(document).ready(function(){
-      $('#wrapper').fullpage();
+
+  $(document).ready(function(){
+
+    $('#wrapper').fullpage({
+      onLeave: function(index, nextIndex, direction)
+      {
+		      var leavingSection = $(this);
+
+		        //after leaving section 2
+		          if((index == 1 && direction =='down') || (index == 3 && direction =='up') )
+              {
+                   $('.left').addClass('animated slideInLeft').on('animationend',function(){
+                   $(this).removeClass('animated slideInLeft');
+                   });
+                   $('.right').addClass('animated slideInRight').on('animationend',function(){
+                   $(this).removeClass('animated slideInRight');
+                   });
+
+
+		          }
+      }
+
     });
+  });
   </script>
 </body>
 </html>
