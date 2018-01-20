@@ -11,11 +11,31 @@ color: rgb(28, 7, 38);
   background-repeat: no-repeat;
   /*background-position: 0 100%;*/
   background-size: 100%;
-  background-blend-mode: overlay;
+  background-blend-mode: multiply;
   background-color: rgba(0,0,0,.2);
-  max-width: 100%;
-  max-height: 100%;
 }
+
+.slide{
+  background-repeat: no-repeat;
+  z-index: -1;
+  /*background-position: 0 100%;*/
+  background-size: 100% !important;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,.2);
+}
+
+#slide1{
+  background-image: url('../img/project/RecommendationSystem.jpg');
+}
+
+#slide2{
+  background-image: url('../img/project/SocialVisualization.jpg');
+}
+
+#slide3{
+  background-image: url('../img/project/Geospatial.jpg');
+}
+
 
 #navbar{
   width:100%;
@@ -33,7 +53,6 @@ color: rgb(28, 7, 38);
 }
 
 .background-image{
-  display: block;
   background-size: cover;
   overflow:hidden;
   max-height: 100%;
@@ -45,14 +64,12 @@ color: rgb(28, 7, 38);
   margin:40px auto;
   text-align: center;
   font-size: 50px;
-  font-weight: bold;
   font-family: 'Amatic SC', cursive;
   text-shadow: 5px 5px 5px #aaa;
 }
 
 
 body {
-  font-weight: bold;
   font-family: 'Amatic SC', cursive;
   font-size:30px;
 }
@@ -139,6 +156,7 @@ body {
   display:block;
 }
 
+/*Vertical Line*/
 .vline{
   background-color: rgb(98, 1, 255);
   height: 100%;
@@ -146,5 +164,6 @@ body {
   position: absolute;
   transform: transitionX(-50%);
   top: 40px;
-  width: 5px;
+  width: 3px;
+  border-radius: 55px;
 }
