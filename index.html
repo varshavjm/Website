@@ -1,11 +1,12 @@
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel='stylesheet'>
   <script src="./js/jquery.fullPage.js"></script>
   <title> Hello World </title>
 </head>
@@ -61,8 +62,16 @@
     <div class='section fp-auto-height-responsive' data-anchor='projects'>
 
         <div class='slide background-image' id='slide1' data-anchor='slide1'>
+          <div class='details'>
+            <h3>Recommendation system</h3>
+            <h4>This was a Spring MVC based web application that crawled over Java wikibooks pages and retrived the top 10 paragraphs for each user given query.
+              The crawled data was preprocessed by removing stop words, porter stemming the content, indexed using Apache Lucene and
+              ranked using TF-IDF score. </h4>
+            <h4>Tech Stack: Java, Jquery, CSS3, Boostrap, Spring MVC, Apache Lucene</h4>
+          </div>
         </div>
         <div class='slide background-image' id='slide2' data-anchor='slide2'>
+
         </div>
         <div class='slide background-image' id='slide3' data-anchor='slide3'>
         </div>
@@ -124,6 +133,7 @@
 
   $(document).ready(function(){
 
+
     $('#wrapper').fullpage({
       slidesNavigation: true,
       onLeave: function(index, nextIndex, direction)
@@ -135,13 +145,11 @@
               {
 
                    $('.first').addClass('animated slideInLeft').on('animationend',function(){
-                   $(this).removeClass('animated slideInLeft');
                    });
 
                    $('#thirdExp').addClass('animated slideInLeftThird').on('animationend',function(){
                    $(this).removeClass('animated slideInLeftThird');
                    });
-
 
                    $('.right').addClass('animated slideInRight').on('animationend',function(){
                    $(this).removeClass('animated slideInRight');
@@ -152,6 +160,7 @@
       }
 
     });
+    $.fn.fullpage.reBuild();
   });
   </script>
 </body>

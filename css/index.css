@@ -17,7 +17,7 @@ color: rgb(28, 7, 38);
   background-blend-mode: multiply;
   background-color: rgba(0,0,0,.2);
 }
-
+/*
 .fp-prev{
     position:absolute;
     top:10% !important;
@@ -29,7 +29,7 @@ color: rgb(28, 7, 38);
     top:10% !important;
     background-color: rgb(245, 15, 153);
 }
-
+*/
 
 
 #slide1{
@@ -91,10 +91,25 @@ body {
 
 
 
-.timeline-block h2,h3,h4{
+ .timeline-block h2,h3,h4{
   margin: 0;
   padding:0 auto 10px auto;
 }
+
+.details{
+  width:60%;
+  margin:auto;
+  display:block;
+}
+.details h3,h4{
+    color:rgb(254, 254, 254);
+    margin:40px auto;
+    padding:0 auto 10px auto;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+
 .left{
   float:left;
   margin-top: 40px;
