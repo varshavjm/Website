@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
-   </head>
   <script src="./js/jquery.fullPage.js"></script>
   <title> Hello World </title>
 </head>
@@ -19,15 +18,15 @@
     <a href='#contact'>Contact</a>
   </div>
   <div id='wrapper'>
-    <section class='section' id='section1' data-anchor='about'>
-      <div class='background-image'>
+  <div class='section fp-auto-height-responsive' id='section1' data-anchor='about'>
+      <div class='background-image' id='section1Image'>
           <div class='text animated fadeIn'>
             Holla! I am Varsha Muzumdar!
           </div>
       </div>
-    </section>
-    <section class='section' data-anchor='education'>
-      <div class="vline" ></div>
+  </div>
+
+    <div class='section fp-auto-height-responsive' data-anchor='education'>
       <div class='timeline-block left first'>
           <div class='info'>
             <h2>Bachelors in Computer Engineering</h2>
@@ -40,8 +39,7 @@
             </div>
           </div>
           <div id="UndergradAtPICT" class='logodiv'>
-            <div class='logo'>
-            </div>
+            <div class='logo'></div>
           </div>
       </div>
       <div class='timeline-block right'>
@@ -55,26 +53,22 @@
             </div>
           </div>
           <div id="MastersAtASU" class='logodiv'>
-            <div class='logo'>
-            </div>
+            <div class='logo'></div>
           </div>
       </div>
+    </div>
 
-    </section>
+    <div class='section fp-auto-height-responsive' data-anchor='projects'>
 
-    <section class='section' data-anchor='projects'>
-  
-        <div class='slide background-image' id='slide1'>
+        <div class='slide background-image' id='slide1' data-anchor='slide1'>
         </div>
-        <div class='slide background-image' id='slide2'>
+        <div class='slide background-image' id='slide2' data-anchor='slide2'>
         </div>
-        <div class='slide background-image' id='slide3'>
+        <div class='slide background-image' id='slide3' data-anchor='slide3'>
         </div>
-      </h1>
-    </section>
+    </div>
     <!--Experience Section -->
-    <section class='section' data-anchor='experience'>
-      <div class="vline" ></div>
+    <div class='section fp-auto-height-responsive' data-anchor='experience'>
       <div class='timeline-block left first'>
           <div class='info'>
             <h3>Software Engineer(May 2015-June 2016)</h3>
@@ -116,24 +110,22 @@
             </div>
           </div>
           <div id="MastersAtASU" class='logodiv'>
-            <div class='logo'>
-            </div>
+            <div class='logo'></div>
           </div>
       </div>
-    </section>
-    <section class='section' data-anchor='contact'>
+    </div>
+    <div class='section fp-auto-height-responsive' data-anchor='contact'>
       <h1>
         Contact
       </h1>
-    </section>
-
-
+    </div>
   </div>
   <script>
 
   $(document).ready(function(){
 
     $('#wrapper').fullpage({
+      slidesNavigation: true,
       onLeave: function(index, nextIndex, direction)
       {
 		      var leavingSection = $(this);

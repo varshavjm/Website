@@ -6,23 +6,31 @@
 color: rgb(28, 7, 38);
 }
 
-#section1{
+
+#section1Image{
   background-image: url('../img/bkgrnd1.jpg');
   background-repeat: no-repeat;
-  /*background-position: 0 100%;*/
   background-size: 100%;
+  overflow:hidden;
+  height: 100%;
+  max-width: 100%;
   background-blend-mode: multiply;
   background-color: rgba(0,0,0,.2);
 }
 
-.slide{
-  background-repeat: no-repeat;
-  z-index: -1;
-  /*background-position: 0 100%;*/
-  background-size: 100% !important;
-  background-blend-mode: multiply;
-  background-color: rgba(0,0,0,.2);
+.fp-prev{
+    position:absolute;
+    top:10% !important;
+    background-color: rgb(245, 15, 153);
 }
+
+.fp-next{
+    position:absolute;
+    top:10% !important;
+    background-color: rgb(245, 15, 153);
+}
+
+
 
 #slide1{
   background-image: url('../img/project/RecommendationSystem.jpg');
@@ -36,14 +44,13 @@ color: rgb(28, 7, 38);
   background-image: url('../img/project/Geospatial.jpg');
 }
 
-
 #navbar{
   width:100%;
   height: 40px;
   position: absolute;
   top:0px;
   z-index: 1000;
-  opacity: 0.8;
+  background-color:rgb(209, 181, 255);
 }
 
 #navbar a{
@@ -53,8 +60,10 @@ color: rgb(28, 7, 38);
 }
 
 .background-image{
-  background-size: cover;
+  background-size: 100%;
   overflow:hidden;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,.3);
   max-height: 100%;
   max-width: 100%;
   }
@@ -152,11 +161,12 @@ body {
 #WorkAtCisco{
   background-image: url('../img/education/cisco_cloud_center_460x230.png');
 }
+
+
 .section div{
   display:block;
 }
-
-/*Vertical Line*/
+/*
 .vline{
   background-color: rgb(98, 1, 255);
   height: 100%;
@@ -167,3 +177,4 @@ body {
   width: 3px;
   border-radius: 55px;
 }
+*/
