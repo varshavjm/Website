@@ -80,6 +80,7 @@ body {
 
  .timeline-block h2,h3,h4{
   margin: 0;
+  color:rgb(0, 0, 0);
   padding:0 auto 10px auto;
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 /*For the text section of the project*/
-.details h2,h3,h4{
+.details h2,.details h3,.details h4{
     color:rgb(254, 254, 254);
     margin:40px auto;
     padding:0 auto 10px auto;
