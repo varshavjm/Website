@@ -14,22 +14,9 @@ color: rgb(28, 7, 38);
   overflow:hidden;
   height: 100%;
   max-width: 100%;
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   background-color: rgba(0,0,0,.2);
 }
-/*
-.fp-prev{
-    position:absolute;
-    top:10% !important;
-    background-color: rgb(245, 15, 153);
-}
-
-.fp-next{
-    position:absolute;
-    top:10% !important;
-    background-color: rgb(245, 15, 153);
-}
-*/
 
 
 #slide1{
@@ -62,8 +49,8 @@ color: rgb(28, 7, 38);
 .background-image{
   background-size: 100%;
   overflow:hidden;
-  background-blend-mode: multiply;
-  background-color: rgba(0,0,0,.3);
+  background-blend-mode: overlay;
+  background-color: rgba(0,0,0,.7);
   max-height: 100%;
   max-width: 100%;
   }
@@ -101,12 +88,17 @@ body {
   margin:auto;
   display:block;
 }
-.details h3,h4{
+
+/*For the text section of the project*/
+.details h2,h3,h4{
     color:rgb(254, 254, 254);
     margin:40px auto;
     padding:0 auto 10px auto;
     word-wrap: break-word;
-    text-align: justify;
+    text-align: center;
+}
+.details h4{
+  font-size:36px;
 }
 
 

@@ -19,7 +19,7 @@
     <a href='#contact'>Contact</a>
   </div>
   <div id='wrapper'>
-  <div class='section fp-auto-height-responsive' id='section1' data-anchor='about'>
+  <div class='section' id='section1' data-anchor='about'>
       <div class='background-image' id='section1Image'>
           <div class='text animated fadeIn'>
             Holla! I am Varsha Muzumdar!
@@ -27,7 +27,7 @@
       </div>
   </div>
 
-    <div class='section fp-auto-height-responsive' data-anchor='education'>
+    <div class='section' data-anchor='education'>
       <div class='timeline-block left first'>
           <div class='info'>
             <h2>Bachelors in Computer Engineering</h2>
@@ -59,25 +59,38 @@
       </div>
     </div>
 
-    <div class='section fp-auto-height-responsive' data-anchor='projects'>
+    <div class='section' data-anchor='projects'>
 
         <div class='slide background-image' id='slide1' data-anchor='slide1'>
           <div class='details'>
-            <h3>Recommendation system</h3>
-            <h4>This was a Spring MVC based web application that crawled over Java wikibooks pages and retrived the top 10 paragraphs for each user given query.
+            <h2>Recommendation system</h2>
+            <h4>This was a Spring MVC based web application that crawled over Java wikibooks pages and retrieved the top 10 posts for each user given query.
               The crawled data was preprocessed by removing stop words, porter stemming the content, indexed using Apache Lucene and
               ranked using TF-IDF score. </h4>
             <h4>Tech Stack: Java, Jquery, CSS3, Boostrap, Spring MVC, Apache Lucene</h4>
           </div>
         </div>
         <div class='slide background-image' id='slide2' data-anchor='slide2'>
-
+            <div class='details'>
+          <h2>Interactive Social Visualization </h2>
+          <h4>This was a open social user model based data visualization project that tracked user activities such as scroll, post,comment,
+          upvote, downvote and favorite on StackOverflow.com. It utilized Google Charts for analyzing these actions for multiple users
+        over different time span and provided filters for comparing users and actions. A chrome extension browser was designed for capturing these events. </h4>
+          <h4>Tech Stack: Java, Jquery, Javascript, CSS3, Spring MVC, Google Charts</h4>
         </div>
+          </div>
         <div class='slide background-image' id='slide3' data-anchor='slide3'>
+          <div class='details'>
+          <h2>Geospatial Analysis </h2>
+          <h4>This project consisted of applying spatial statistics to spatial-temporal big data for identifying
+          statistically significant hotspots pick up locations using Apache Spark and Java. The hotspots were determined using Getis-Ord statistic.
+          The dataset comprised over one billion records representing all Yellow Taxi trips in New York for January 2016 </h4>
+          <h4>Tech Stack: Java, Apache Spark, Maven, Hadoop</h4>
+          </div>
         </div>
     </div>
     <!--Experience Section -->
-    <div class='section fp-auto-height-responsive' data-anchor='experience'>
+    <div class='section' data-anchor='experience'>
       <div class='timeline-block left first'>
           <div class='info'>
             <h3>Software Engineer(May 2015-June 2016)</h3>
@@ -145,14 +158,16 @@
               {
 
                    $('.first').addClass('animated slideInLeft').on('animationend',function(){
+                      $(this).removeClass('animated slideInLeftThird');
                    });
 
+
                    $('#thirdExp').addClass('animated slideInLeftThird').on('animationend',function(){
-                   $(this).removeClass('animated slideInLeftThird');
+                     $(this).removeClass('animated slideInLeftThird');
                    });
 
                    $('.right').addClass('animated slideInRight').on('animationend',function(){
-                   $(this).removeClass('animated slideInRight');
+                     $(this).removeClass('animated slideInRight');
                    });
 
 
