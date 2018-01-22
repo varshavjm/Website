@@ -8,7 +8,7 @@ color: rgb(28, 7, 38);
 
 /*Main Section*/
 #section1Image{
-  background-image: url('../img/bkgrnd1.jpg');
+  background-image: url('../img/home/bkgrnd1.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   overflow:hidden;
@@ -167,7 +167,7 @@ body {
   background-image: url('../img/education/eq-web.png');
 }
 #WorkAtCisco{
-  background-image: url('../img/education/cisco_cloud_center_460x230.png');
+  background-image: url('../img/education/cisco_cloud_center.png');
 }
 
 
