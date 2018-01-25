@@ -19,6 +19,8 @@ color: rgb(28, 7, 38);
 }
 
 
+
+
 #slide1{
   background-image: url('../img/project/RecommendationSystem.jpg');
 }
@@ -186,3 +188,9 @@ body {
   border-radius: 55px;
 }
 */
+
+/*Contact Section*/
+#section4{
+  /*background: linear-gradient(180deg,rgba(147,39,143,0) 0,rgba(147,39,143,.14) 1%,#93278f 7%,#93278f 19%,#4e2f91 39%,#4e2f91 49%,#632d91 61%,#93278f 85%,#fbb03b)*/
+  background:linear-gradient(180deg, rgb(97, 50, 212),rgb(233, 35, 178));
+}
